@@ -60,6 +60,18 @@ param (
 
     }
 
+
+# Out param
+    write-host "Report param"
+    Write-Host " > SQL Instance: $SqlInstance"
+    Write-Host " > Report root:  $reportRoot"
+    Write-Host " > Start time:   $($sqlParams['StartTime'])"
+    Write-Host " > End time:     $($sqlParams['EndTime'])"
+    Write-Host " > Meta file:    $($sqlParams['metaFilePath'])"
+    Write-Host " > Event file:   $($sqlParams['EventFilePath'])"
+    Write-Host ""
+        
+
 # Vars
     $dbEventSummary = @{}
 
