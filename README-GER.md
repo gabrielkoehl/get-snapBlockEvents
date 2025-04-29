@@ -82,6 +82,9 @@ Dies sind die Pfade, welche für das eigentliche PowerShell-Script benötigt wer
 | `-excel` | Switch | Nein | $false | Erstellt Excel-Zusammenfassung |
 | `-cleanUp` | Switch | Nein | $false | Bereinigt Report-Dateien älter als cleanUpDays |
 | `-cleanUpDays` | Int | Nein | 30 | Anzahl der Tage für die Bereinigung |
+| `-restartEventSession` | Switch | Nein | $false | Event Session `eventSessionName` neu starten ( File CleanUp ) |
+| `-eventSessionName` | String | Nein | - | Event Session, welche neu gestartet werden soll |
+
 
 ### Basis-Aufruf
 

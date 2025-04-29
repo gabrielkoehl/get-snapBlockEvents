@@ -34,10 +34,21 @@ param (
     [switch] $cleanUp,
 
     [Parameter(Mandatory = $false)]
-    [int] $cleanUpDays = 30
+    [int] $cleanUpDays = 30,
+
+    [Parameter(Mandatory = $false)]
+    [switch] $restartEventSession,
+
+    [Parameter(Mandatory = $false)]
+    [string] $eventSessionName
 
 )
 
+# Check param
+
+    if ($PSBoundParameters.ContainsKey('restartEventSession') -and -not $PSBoundParameters.ContainsKey('eventSessionName')) {
+        throw "When -restartEventSession is provided, -eventSessionName must also be specified."
+    }
 
 
 # Event Param
@@ -203,6 +214,14 @@ param (
     if ( $cleanUp.IsPresent ) {
 
         start-cleanUp -reportPath $reportRoot -days $cleanUpDays
+
+    }
+
+# Restart event session
+
+    if ( $restartEventSession.IsPresent ) {
+
+        restart-EventSession -eventSessionName $eventSessionName -sqlInstance $SqlInstance
 
     }
 

@@ -82,6 +82,8 @@ These are the paths needed for the PowerShell script. Either they can be set as 
 | `-excel` | Switch | No | $false | Creates Excel summary |
 | `-cleanUp` | Switch | No | $false | Cleans up report files older than cleanUpDays |
 | `-cleanUpDays` | Int | No | 30 | Number of days for cleanup |
+| `-restartEventSession` | Switch | No | $false | Restart the Event Session `eventSessionName` (File CleanUp) |
+| `-eventSessionName` | String | No | - | Name of the Event Session to be restarted |
 
 ### Basic Call
 
