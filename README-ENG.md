@@ -1,4 +1,4 @@
-# SQL Server Block Event Reporter
+# SQL Server Block & Lock Event Reporting Solution
 
 A PowerShell-based tool for analyzing SQL Server blocking events and deadlocks using Extended Events.
 
