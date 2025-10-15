@@ -10,7 +10,7 @@
 	DECLARE @max_rollover_files INT				= 1
 	DECLARE @max_memory INT						= 4096
 	DECLARE @max_dispatch_latency INT			= 5
-	DECLARE @startup_state BIT					= 0 -- 0 = OFF, 1 = ON
+	DECLARE @startup_state BIT					= 0 -- Start with Server - 0 = OFF, 1 = ON
 
 ---------------------------------------------------------------------------------
 
