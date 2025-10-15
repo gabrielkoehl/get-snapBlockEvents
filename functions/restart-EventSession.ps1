@@ -4,6 +4,8 @@ function restart-EventSession {
         [string] $sqlInstance
     )
 
+    Write-Host "Stopping Event Session [$eventSessionName]."
+
     $session = Get-DbaXESession -SqlInstance $sqlInstance -session $eventSessionName
 
     try {
@@ -24,5 +26,5 @@ function restart-EventSession {
         Write-Host "Error restarting session $eventSessionName"
 
     }
-    
+
 }
